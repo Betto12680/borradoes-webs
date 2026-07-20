@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borradores Web — Edilberto Sarmiento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #10b981;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card .category {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .card .btn {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: background-color 0.2s ease;
+      margin-top: 16px;
+    }
+    .card .btn:hover {
+      background-color: var(--primary-hover);
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Portafolio de Borradores Web</h1>
+      <p class="subtitle">Demostraciones en vivo de páginas web personalizadas para clientes locales.</p>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Recover Station</h2>
+        </div>
+        <a href="./recover-station/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Activ Fisioterapia</h2>
+        </div>
+        <a href="./activ-fisioterapia/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Rehabilitación · Medellín</div>
+          <h2>Centro BMS</h2>
+        </div>
+        <a href="./bms-rehabilitacion-fisica/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Ortopedia · Medellín</div>
+          <h2>Centro Ortopedia El Poblado</h2>
+        </div>
+        <a href="./centro-ortopedia-el-poblado/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Bestrong Fisioterapia</h2>
+        </div>
+        <a href="./bestrong-fisioterapia/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Fisioterapeuta Andrés Piñeros</h2>
+        </div>
+        <a href="./andres-pineros-fisioterapeuta/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Rehabilitación de Mano · Medellín</div>
+          <h2>Fisioterapia Rehab Motion</h2>
+        </div>
+        <a href="./rehab-motion-fisioterapia/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Fissio T</h2>
+        </div>
+        <a href="./fissio-t/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Domicilio · Medellín</div>
+          <h2>Dra. María Andrea Ríos</h2>
+        </div>
+        <a href="./maria-andrea-rios-fisioterapeuta/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Andrea Katich Kurk</h2>
+        </div>
+        <a href="./andrea-katich-kurk/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Dra. Juliana Torné</h2>
+        </div>
+        <a href="./juliana-torne-fisioterapeuta/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Domicilio · Medellín</div>
+          <h2>Tatiana Tirado</h2>
+        </div>
+        <a href="./tatiana-tirado-fisioterapeuta/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Ana María Serna & Sandra Vásquez</h2>
+        </div>
+        <a href="./serna-vasquez-fisioterapeutas/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Fisioterapia · Medellín</div>
+          <h2>Prof. Juliana Restrepo</h2>
+        </div>
+        <a href="./juliana-restrepo-fisioterapeuta/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="category">Dermatofuncional · Medellín</div>
+          <h2>Daniela Herrera (D'fisio)</h2>
+        </div>
+        <a href="./dfisio-daniela-herrera/" class="btn" target="_blank">Ver Demo ↗</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Edilberto Sarmiento — Diseño Web Freelance</p>
+    </footer>
+  </div>
+</body>
+</html>
