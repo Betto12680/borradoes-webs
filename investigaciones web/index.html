@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investigaciones web · Referentes por sector</title>
+<style>
+:root{--ink:#161b22;--gris:#5b6570;--line:#e5e9ee;--bg:#f5f7fa;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+header{background:linear-gradient(120deg,#1b2735,#0f1620);color:#fff;padding:60px 0 46px}
+header .k{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;opacity:.7}
+header h1{font-size:clamp(2rem,4.5vw,2.8rem);margin:10px 0 12px;font-weight:800}
+header p{max-width:620px;opacity:.85}
+section{padding:44px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px;text-decoration:none;color:inherit;box-shadow:0 4px 16px rgba(22,27,34,.05);transition:transform .15s,box-shadow .15s}
+a.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(22,27,34,.12)}
+.card .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border-radius:999px;margin-bottom:14px;color:#fff}
+.card h2{font-size:1.25rem;font-weight:800;margin-bottom:6px}
+.card .refs{color:var(--gris);font-size:.9rem;margin-bottom:14px}
+.card .go{font-weight:700;font-size:.85rem}
+.b1{background:#0e9aa7}.b2{background:#3e7d54}.b3{background:#0e5fd8}.b4{background:#b5613a}
+.g1{color:#0b6e78}.g2{color:#2c5c3c}.g3{color:#0a3d8f}.g4{color:#8a4526}
+.note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-top:26px;font-size:.9rem;color:var(--gris)}
+.note b{color:var(--ink)}
+.foot{color:var(--gris);font-size:.8rem;padding:20px 0 50px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="k">Rastrack / Freelancer · Benchmark de diseño web</div>
+    <h1>Investigaciones web por sector</h1>
+    <p>12 sitios referentes del mundo analizados (3 por sector) en imagen, efectos, composición, jerarquía, SEO y conversión — con lo que debemos replicar para mejorar los borradores de cada cliente.</p>
+  </div>
+</header>
+<section>
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="1 - Odontologia/informe-odontologia.html">
+        <span class="badge b1">Odontología · Neiva</span>
+        <h2 class="g1">Clínicas dentales</h2>
+        <div class="refs">Referentes: Tend · Rüh Dental · Propdental</div>
+        <div class="go g1">Ver informe completo →</div>
+      </a>
+      <a class="card" href="2 - Opticas/informe-opticas.html">
+        <span class="badge b2">Ópticas · Bogotá</span>
+        <h2 class="g2">Ópticas</h2>
+        <div class="refs">Referentes: Bailey Nelson · Ace &amp; Tate · Pair Eyewear</div>
+        <div class="go g2">Ver informe completo →</div>
+      </a>
+      <a class="card" href="3 - Fisioterapia/informe-fisioterapia.html">
+        <span class="badge b3">Fisioterapia · Medellín</span>
+        <h2 class="g3">Fisioterapia</h2>
+        <div class="refs">Referentes: Six Physio · Ten · FisioOnline</div>
+        <div class="go g3">Ver informe completo →</div>
+      </a>
+      <a class="card" href="4 - Glamping y hoteles/informe-glamping.html">
+        <span class="badge b4">Glamping · Huila</span>
+        <h2 class="g4">Glamping y hoteles</h2>
+        <div class="refs">Referentes: AutoCamp · Under Canvas · Collective Retreats</div>
+        <div class="go g4">Ver informe completo →</div>
+      </a>
+    </div>
+    <div class="note">
+      <b>Cómo usar esto:</b> cada informe termina con un <b>cuadro comparativo</b> y un <b>"Playbook"</b> de 6 puntos concretos para aplicar a las webs de nuestros clientes. Cada tarjeta de referente tiene el botón <b>"Visitar sitio ↗"</b> para revisar la web en vivo, y las capturas de pantalla completas están en la subcarpeta <code>img/</code> de cada sector (<code>*_full.png</code>).
+    </div>
+  </div>
+</section>
+<div class="foot wrap">Investigaciones web · Rastrack / Freelancer · Julio 2026</div>
+</body>
+</html>

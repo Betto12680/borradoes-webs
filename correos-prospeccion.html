@@ -1,0 +1,685 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Correos de prospección — 7 envíos listos</title>
+<style>
+  :root{
+    --paper:#F1EDE3;
+    --surface:#FFFFFF;
+    --surface-2:#F8F5EE;
+    --ink:#201C16;
+    --ink-soft:#756D5E;
+    --ink-faint:#A79C87;
+    --line:#DDD6C4;
+    --accent:#A3401F;
+    --accent-soft:#F3E4DB;
+    --accent-ink:#7C3016;
+    --wa:#1F9E56;
+    --wa-soft:#E4F5EA;
+    --focus:#2A5B8C;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#171410;
+      --surface:#211D17;
+      --surface-2:#28231C;
+      --ink:#EDE7DA;
+      --ink-soft:#B3A891;
+      --ink-faint:#7A705D;
+      --line:#3A3327;
+      --accent:#E08858;
+      --accent-soft:#3A2620;
+      --accent-ink:#F2AB84;
+      --wa:#3DD174;
+      --wa-soft:#173226;
+      --focus:#7CB0E8;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171410;
+    --surface:#211D17;
+    --surface-2:#28231C;
+    --ink:#EDE7DA;
+    --ink-soft:#B3A891;
+    --ink-faint:#7A705D;
+    --line:#3A3327;
+    --accent:#E08858;
+    --accent-soft:#3A2620;
+    --accent-ink:#F2AB84;
+    --wa:#3DD174;
+    --wa-soft:#173226;
+    --focus:#7CB0E8;
+  }
+  :root[data-theme="light"]{
+    --paper:#F1EDE3;
+    --surface:#FFFFFF;
+    --surface-2:#F8F5EE;
+    --ink:#201C16;
+    --ink-soft:#756D5E;
+    --ink-faint:#A79C87;
+    --line:#DDD6C4;
+    --accent:#A3401F;
+    --accent-soft:#F3E4DB;
+    --accent-ink:#7C3016;
+    --wa:#1F9E56;
+    --wa-soft:#E4F5EA;
+    --focus:#2A5B8C;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent-soft);color:var(--accent-ink)}
+
+  .mono{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+  }
+  .serif{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  .num{font-variant-numeric:tabular-nums}
+
+  a{color:var(--accent-ink)}
+  a:focus-visible,button:focus-visible{
+    outline:2px solid var(--focus);
+    outline-offset:2px;
+    border-radius:4px;
+  }
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 96px}
+
+  /* ===== MASTHEAD ===== */
+  header.masthead{
+    padding:56px 0 40px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:8px;
+  }
+  .kicker{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .kicker::before{
+    content:"";
+    width:7px;height:7px;border-radius:50%;
+    background:var(--accent);
+    flex:none;
+  }
+  h1{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-weight:400;
+    font-size:clamp(28px,4.4vw,38px);
+    line-height:1.18;
+    margin:14px 0 0;
+    text-wrap:balance;
+    max-width:20ch;
+  }
+  .masthead-sub{
+    margin-top:14px;
+    color:var(--ink-soft);
+    font-size:15px;
+    max-width:52ch;
+  }
+
+  .subject-block{
+    margin-top:28px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .subject-block .lbl{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    flex:none;
+  }
+  .subject-block .val{
+    font-weight:600;
+    font-size:15.5px;
+  }
+  .subject-block .tag{
+    margin-left:auto;
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:10.5px;
+    color:var(--ink-faint);
+  }
+
+  /* ===== INDEX / JUMP NAV ===== */
+  nav.index{
+    margin:32px 0 8px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:8px;
+  }
+  nav.index a{
+    display:block;
+    text-decoration:none;
+    color:var(--ink);
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:13px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  nav.index a:hover{border-color:var(--accent);transform:translateY(-1px)}
+  nav.index a .n{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    color:var(--accent-ink);
+    font-size:11px;
+    margin-right:6px;
+  }
+
+  /* ===== CARDS ===== */
+  .cards{margin-top:44px;display:flex;flex-direction:column;gap:28px}
+
+  article.card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    scroll-margin-top:20px;
+  }
+  .card-head{
+    padding:22px 26px 18px;
+    border-bottom:1px solid var(--line);
+  }
+  .card-head-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .idx{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    color:var(--accent-ink);
+    background:var(--accent-soft);
+    padding:4px 9px;
+    border-radius:999px;
+  }
+  .rating{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+  }
+  h2.name{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-weight:400;
+    font-size:22px;
+    margin:12px 0 2px;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    margin-top:8px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .meta-row span b{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-weight:500;
+    color:var(--ink);
+  }
+
+  .card-body{padding:22px 26px 26px}
+
+  .field-lbl{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:6px;
+  }
+  .subject-mini{
+    font-size:14.5px;
+    font-weight:600;
+    margin-bottom:18px;
+  }
+
+  .letter{
+    background:var(--surface-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    max-width:64ch;
+  }
+  .letter p{margin:0 0 14px;font-size:14.5px}
+  .letter p:last-child{margin-bottom:0}
+  .letter a{color:var(--accent-ink);text-decoration:underline}
+
+  .card-actions{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  button.copy-btn{
+    font-family:inherit;
+    font-size:13px;
+    font-weight:600;
+    color:var(--surface);
+    background:var(--ink);
+    border:none;
+    border-radius:999px;
+    padding:10px 18px;
+    cursor:pointer;
+    transition:transform .15s ease, background .15s ease;
+  }
+  button.copy-btn:hover{transform:translateY(-1px)}
+  button.copy-btn[data-copied="true"]{background:var(--wa)}
+
+  a.wa-btn{
+    font-family:inherit;
+    font-size:13px;
+    font-weight:600;
+    color:var(--wa);
+    background:var(--wa-soft);
+    border:1px solid transparent;
+    border-radius:999px;
+    padding:9px 16px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    transition:transform .15s ease;
+  }
+  a.wa-btn:hover{transform:translateY(-1px)}
+
+  .note{
+    margin-top:16px;
+    padding:12px 14px;
+    background:var(--accent-soft);
+    border-radius:8px;
+    font-size:12.5px;
+    color:var(--accent-ink);
+    display:flex;
+    gap:8px;
+  }
+  .note b{
+    font-family:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    font-size:10.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    flex:none;
+  }
+
+  footer.foot{
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    color:var(--ink-faint);
+    font-size:12.5px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important}
+  }
+
+  @media (max-width:520px){
+    .wrap{padding:0 16px 80px}
+    header.masthead{padding:40px 0 32px}
+    .card-head,.card-body{padding-left:18px;padding-right:18px}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">Prospección · 8 envíos preparados</div>
+    <h1>Correos listos para copiar y enviar</h1>
+    <p class="masthead-sub">Un correo por negocio, mismo asunto para todos. Copia el cuerpo completo con el botón de cada tarjeta y pégalo en tu cliente de correo.</p>
+
+    <div class="subject-block">
+      <span class="lbl">Asunto (igual para todos)</span>
+      <span class="val">¿Sabes cuántos pacientes te buscan y no te encuentran?</span>
+      <span class="tag num">8 envíos</span>
+    </div>
+  </header>
+
+  <nav class="index" aria-label="Ir directo a un correo">
+    <a href="#c1"><span class="n num">01</span>Recover Station</a>
+    <a href="#c2"><span class="n num">02</span>BMS</a>
+    <a href="#c3"><span class="n num">03</span>Centro Ortopedia</a>
+    <a href="#c4"><span class="n num">04</span>Rehab Motion</a>
+    <a href="#c5"><span class="n num">05</span>Juliana Torné</a>
+    <a href="#c6"><span class="n num">06</span>Andrés Piñeros</a>
+    <a href="#c7"><span class="n num">07</span>Serna &amp; Vásquez</a>
+    <a href="#c8"><span class="n num">08</span>Andrea Katich</a>
+  </nav>
+
+  <div class="cards">
+
+    <!-- 1 — RECOVER STATION -->
+    <article class="card" id="c1">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 01/07</span>
+          <span class="rating num">5.0 ★ · 196 reseñas</span>
+        </div>
+        <h2 class="name">Recover Station</h2>
+        <div class="meta-row">
+          <span>Para: <b>teamrecover@recoverstation.com</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body1">
+          <p>Hola,</p>
+          <p>Vi Recover Station en Google Maps — 196 reseñas con 5.0 estrellas, felicitaciones, se nota que hacen bien las cosas.</p>
+          <p>Noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://recover-station-borrador.netlify.app" target="_blank" rel="noopener">https://recover-station-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body1" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 — BMS -->
+    <article class="card" id="c2">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 02/07</span>
+          <span class="rating num">4.9 ★ · 66 reseñas</span>
+        </div>
+        <h2 class="name">Centro de Rehabilitación Física BMS</h2>
+        <div class="meta-row">
+          <span>Para: <b>nicolayxxx@hotmail.com</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body2">
+          <p>Hola,</p>
+          <p>Vi Centro de Rehabilitación Física BMS en Google Maps — 66 reseñas con 4.9 estrellas, felicitaciones, se nota que hacen bien las cosas.</p>
+          <p>Noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://bms-rehabilitacion-fisica-borrador.netlify.app" target="_blank" rel="noopener">https://bms-rehabilitacion-fisica-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body2" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>El correo salió literal de su Facebook, incluyendo las "xxx". Confírmalo por WhatsApp antes de asumir que llega — podría ser un alias raro o un error de tipeo del dueño.</span></div>
+      </div>
+    </article>
+
+    <!-- 3 — CENTRO DE ORTOPEDIA EL POBLADO -->
+    <article class="card" id="c3">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 03/07</span>
+          <span class="rating num">4.4 ★ · 329 reseñas</span>
+        </div>
+        <h2 class="name">Centro de Ortopedia El Poblado</h2>
+        <div class="meta-row">
+          <span>Para: <b>info@ortopoblado.com.co</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body3">
+          <p>Hola,</p>
+          <p>Vi Centro de Ortopedia El Poblado en Google Maps — 329 reseñas con 4.4 estrellas, felicitaciones, se nota que hacen bien las cosas.</p>
+          <p>Noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://centro-ortopedia-el-poblado-borrador.netlify.app" target="_blank" rel="noopener">https://centro-ortopedia-el-poblado-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body3" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>Su ficha de Google muestra un dominio propio (ortopoblado.com) pero el enlace está caído. Es tu mejor argumento para el seguimiento por WhatsApp: "vi que su web actual ya no carga".</span></div>
+      </div>
+    </article>
+
+    <!-- 4 — REHAB MOTION -->
+    <article class="card" id="c4">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 04/07</span>
+          <span class="rating num">4.8 ★ · 8 reseñas</span>
+        </div>
+        <h2 class="name">Fisioterapia Rehab Motion</h2>
+        <div class="meta-row">
+          <span>Para: <b>rehabmotioncolombia@gmail.com</b></span>
+          <span>Contacto: <b>Susana Pradilla</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body4">
+          <p>Hola Susana,</p>
+          <p>Vi Fisioterapia Rehab Motion en Google Maps — 8 reseñas con 4.8 estrellas, felicitaciones, se nota que haces bien las cosas.</p>
+          <p>Noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://rehab-motion-fisioterapia-borrador.netlify.app" target="_blank" rel="noopener">https://rehab-motion-fisioterapia-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body4" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 — DRA. JULIANA TORNÉ -->
+    <article class="card" id="c5">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 05/07</span>
+          <span class="rating num">4.0 ★ · 4 reseñas</span>
+        </div>
+        <h2 class="name">Dra. Juliana Torné Escobar</h2>
+        <div class="meta-row">
+          <span>Para: <b>julianatornesana@gmail.com</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body5">
+          <p>Hola Juliana,</p>
+          <p>Vi tu perfil de fisioterapia en Google Maps y noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://juliana-torne-fisioterapeuta-borrador.netlify.app" target="_blank" rel="noopener">https://juliana-torne-fisioterapeuta-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body5" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>Solo 4 reseñas — quité la línea de "felicitaciones por las reseñas" para que no sonara forzada, y arranqué directo en la oportunidad de la web.</span></div>
+      </div>
+    </article>
+
+    <!-- 6 — ANDRÉS PIÑEROS -->
+    <article class="card" id="c6">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 06/07</span>
+          <span class="rating num">5.0 ★ · 1 reseña</span>
+        </div>
+        <h2 class="name">Fisioterapeuta Andrés Piñeros G.</h2>
+        <div class="meta-row">
+          <span>Para: <b>ftandresp@gmail.com</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body6">
+          <p>Hola Andrés,</p>
+          <p>Vi tu perfil de fisioterapia en Google Maps con muy buena calificación, y noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://andres-pineros-fisioterapeuta-borrador.netlify.app" target="_blank" rel="noopener">https://andres-pineros-fisioterapeuta-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body6" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>Solo 1 reseña — se evitó mencionar el número y se habló de "muy buena calificación" en su lugar.</span></div>
+      </div>
+    </article>
+
+    <!-- 7 — SERNA & VÁSQUEZ -->
+    <article class="card" id="c7">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 07/08</span>
+          <span class="rating num">5.0 ★ · 2 reseñas</span>
+        </div>
+        <h2 class="name">Ana María Serna &amp; Sandra María Vásquez</h2>
+        <div class="meta-row">
+          <span>Para: <b>amsese@gmail.com</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body7">
+          <p>Hola Ana María,</p>
+          <p>Vi el consultorio que tienes con Sandra María en Google Maps y noté que no tienen página web propia, así que les armé un borrador para que vean cómo se vería una:</p>
+          <p>👉 <a href="https://serna-vasquez-fisioterapeutas-borrador.netlify.app" target="_blank" rel="noopener">https://serna-vasquez-fisioterapeutas-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísenla y me dicen qué les parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieren que hablemos para implementarla, escríbanme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndanme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body7" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>Son dos socias con un solo correo — se ajustó a "ustedes/tienen" en vez de "tú", y se dejó el saludo dirigido a Ana María, dueña del correo.</span></div>
+      </div>
+    </article>
+
+    <!-- 8 — ANDREA KATICH KURK -->
+    <article class="card" id="c8">
+      <div class="card-head">
+        <div class="card-head-top">
+          <span class="idx num">ENVÍO 08/08</span>
+          <span class="rating num">El Poblado · Medellín</span>
+        </div>
+        <h2 class="name">Andrea Katich Kurk - Fisioterapeuta</h2>
+        <div class="meta-row">
+          <span>Para: <b>andreakatich@une.net.co</b></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="field-lbl">Cuerpo del correo</div>
+        <div class="letter" id="body8">
+          <p>Hola Andrea,</p>
+          <p>Vi tu perfil de fisioterapia en El Poblado, Medellín, y noté que no tienes página web propia, así que te armé un borrador para que veas cómo se vería una:</p>
+          <p>👉 <a href="https://andrea-katich-kurk-borrador.netlify.app" target="_blank" rel="noopener">https://andrea-katich-kurk-borrador.netlify.app</a></p>
+          <p>Es solo una propuesta, sin compromiso. Revísala y dime qué te parece.</p>
+          <p>Soy Edilberto Sarmiento, freelancer y me dedico a diseñar páginas web. Si quieres que hablemos para implementar la tuya, escríbeme por WhatsApp (<a href="https://wa.me/573104816153" target="_blank" rel="noopener">https://wa.me/573104816153</a>) o respóndeme este correo.</p>
+          <p>Saludos,<br>Edilberto Sarmiento</p>
+        </div>
+        <div class="card-actions">
+          <button class="copy-btn" data-target="body8" onclick="copyLetter(this)">Copiar correo completo</button>
+          <a class="wa-btn" href="https://wa.me/573104816153" target="_blank" rel="noopener">↗ Abrir tu WhatsApp</a>
+        </div>
+        <div class="note"><b>Nota</b><span>Correo recuperado en investigación de redes sociales (andreakatich@une.net.co).</span></div>
+      </div>
+    </article>
+
+  </div>
+
+  <footer class="foot">
+    Asunto igual para los 8 · Botón "Copiar" trae el cuerpo del correo listo para pegar · WhatsApp: wa.me/573104816153
+  </footer>
+
+</div>
+
+<script>
+function selectLetterText(el){
+  try{
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    return true;
+  }catch(e){ return false; }
+}
+
+function copyLetter(btn){
+  var id = btn.getAttribute('data-target');
+  var el = document.getElementById(id);
+  var text = Array.prototype.map.call(
+    el.querySelectorAll('p'),
+    function(p){ return p.innerText; }
+  ).join('\n\n');
+  var original = 'Copiar correo completo';
+
+  function reset(delay){
+    setTimeout(function(){
+      btn.textContent = original;
+      btn.removeAttribute('data-copied');
+    }, delay);
+  }
+
+  function succeeded(){
+    btn.textContent = '✓ Copiado';
+    btn.setAttribute('data-copied','true');
+    reset(1800);
+  }
+
+  function fallbackToSelection(){
+    // El navegador bloqueó el portapapeles: seleccionamos el texto por ti,
+    // solo falta presionar Cmd+C / Ctrl+C.
+    var ok = selectLetterText(el);
+    btn.textContent = ok ? 'Texto seleccionado — pulsa Cmd+C' : 'Selecciona el texto y copia';
+    reset(2600);
+  }
+
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(succeeded).catch(function(){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        if(ok){ succeeded(); } else { fallbackToSelection(); }
+      }catch(e){ fallbackToSelection(); }
+    });
+  } else {
+    fallbackToSelection();
+  }
+}
+</script>
