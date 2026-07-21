@@ -233,7 +233,14 @@
       .hero p.lead { font-size: 1.05rem; }
       .btn-hero-primary { padding: 14px 28px; font-size: 1rem; width: 100%; text-align: center; }
     }
-  </style>
+  
+        /* Viñetas Animadas (Punticos con Pulso) */
+        .pulse-bullet-dot { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-bottom: 16px; }
+        .pulse-bullet-dot .dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary, #38bdf8); position: relative; box-shadow: 0 0 10px var(--secondary, #38bdf8); }
+        .pulse-bullet-dot .dot::after { content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; border-radius: 50%; border: 2px solid var(--secondary, #38bdf8); animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(1.8); opacity: 0; } }
+
+    </style>
 </head>
 <body>
 

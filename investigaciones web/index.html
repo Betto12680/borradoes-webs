@@ -27,7 +27,14 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(22,27,34,.12
 .note{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-top:26px;font-size:.9rem;color:var(--gris)}
 .note b{color:var(--ink)}
 .foot{color:var(--gris);font-size:.8rem;padding:20px 0 50px;text-align:center}
-</style>
+
+        /* Viñetas Animadas (Punticos con Pulso) */
+        .pulse-bullet-dot { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-bottom: 16px; }
+        .pulse-bullet-dot .dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary, #38bdf8); position: relative; box-shadow: 0 0 10px var(--secondary, #38bdf8); }
+        .pulse-bullet-dot .dot::after { content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; border-radius: 50%; border: 2px solid var(--secondary, #38bdf8); animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(1.8); opacity: 0; } }
+
+    </style>
 </head>
 <body>
 <header>

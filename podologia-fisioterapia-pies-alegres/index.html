@@ -87,7 +87,7 @@
         .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .srv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.3s ease; position: relative; overflow: hidden; }
         .srv-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .srv-icon { font-size: 2.2rem; margin-bottom: 20px; background: rgba(255,255,255,0.05); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+        
         .srv-card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
         .srv-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
         .btn-outline { display: inline-block; text-align: center; border: 1px solid var(--border); padding: 12px 18px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
@@ -146,6 +146,13 @@
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .carousel-slide { height: 350px; }
         }
+    
+        /* Viñetas Animadas (Punticos con Pulso) */
+        .pulse-bullet-dot { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-bottom: 16px; }
+        .pulse-bullet-dot .dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary, #38bdf8); position: relative; box-shadow: 0 0 10px var(--secondary, #38bdf8); }
+        .pulse-bullet-dot .dot::after { content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; border-radius: 50%; border: 2px solid var(--secondary, #38bdf8); animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(1.8); opacity: 0; } }
+
     </style>
 </head>
 <body>
@@ -189,25 +196,25 @@
         </div>
         <div class="srv-grid">
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Terapia Manual y Liberación Miofascial</h3>
             <p>Técnicas manuales especializadas para liberar tensiones, mejorar movilidad y aliviar el dolor crónico.</p>
             <a href="https://wa.me/525555230987?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Terapia%20Manual%20y%20Liberación%20Miofascial" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Rehabilitación Deportiva</h3>
             <p>Rehabilitación específica para deportistas amateur y de alto rendimiento. Retorno seguro al deporte con progresiones medidas.</p>
             <a href="https://wa.me/525555230987?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Rehabilitación%20Deportiva" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Fisioterapia Post-Operatoria</h3>
             <p>Recuperación guiada tras cirugía ortopédica. Plan progresivo para recuperar fuerza, movilidad y funcionalidad.</p>
             <a href="https://wa.me/525555230987?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Fisioterapia%20Post-Operatoria" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Punción Seca y Electrólisis</h3>
             <p>Técnica invasiva con aguja para desactivar puntos gatillo miofasciales. Alta efectividad en dolor crónico musculoesquelético.</p>
             <a href="https://wa.me/525555230987?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Punción%20Seca%20y%20Electrólisis" class="btn-outline">Consultar por WhatsApp</a>

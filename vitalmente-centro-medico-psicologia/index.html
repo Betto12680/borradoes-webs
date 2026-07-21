@@ -87,7 +87,7 @@
         .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .srv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.3s ease; position: relative; overflow: hidden; }
         .srv-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .srv-icon { font-size: 2.2rem; margin-bottom: 20px; background: rgba(255,255,255,0.05); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+        
         .srv-card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
         .srv-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
         .btn-outline { display: inline-block; text-align: center; border: 1px solid var(--border); padding: 12px 18px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
@@ -146,6 +146,13 @@
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .carousel-slide { height: 350px; }
         }
+    
+        /* Viñetas Animadas (Punticos con Pulso) */
+        .pulse-bullet-dot { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-bottom: 16px; }
+        .pulse-bullet-dot .dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary, #38bdf8); position: relative; box-shadow: 0 0 10px var(--secondary, #38bdf8); }
+        .pulse-bullet-dot .dot::after { content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; border-radius: 50%; border: 2px solid var(--secondary, #38bdf8); animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(1.8); opacity: 0; } }
+
     </style>
 </head>
 <body>
@@ -189,25 +196,25 @@
         </div>
         <div class="srv-grid">
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 0 0 4.5 2.6V10a5 5 0 0 0 10 0V2.6a.3.3 0 0 0-.3-.3h-1.4a.3.3 0 0 0-.3.3V10a3 3 0 0 1-6 0V2.6a.3.3 0 0 0-.3-.3H4.8z"/><path d="M9.5 15a4.5 4.5 0 0 0 4.5 4.5h1a2.5 2.5 0 0 0 2.5-2.5v-1.5"/><circle cx="17.5" cy="13.5" r="2"/></svg></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Consulta Médica Especializada</h3>
             <p>Valoración médica integral con historia clínica completa, exploración física y plan de manejo personalizado.</p>
             <a href="https://wa.me/525555406677?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Consulta%20Médica%20Especializada" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Diagnóstico y Laboratorio Clínico</h3>
             <p>Estudios de laboratorio y gabinete con resultados rápidos. Diagnóstico certero para tomar decisiones informadas.</p>
             <a href="https://wa.me/525555406677?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Diagnóstico%20y%20Laboratorio%20Clínico" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon"></div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Checkups Integrales Preventivos</h3>
             <p>Evaluación preventiva completa con perfil bioquímico, estudios de imagen y consulta especializada.</p>
             <a href="https://wa.me/525555406677?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Checkups%20Integrales%20Preventivos" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon">️</div>
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
             <h3>Especialidades Quirúrgicas</h3>
             <p>Atención médica integral con tecnología de diagnóstico moderna y un equipo humano cercano.</p>
             <a href="https://wa.me/525555406677?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Especialidades%20Quirúrgicas" class="btn-outline">Consultar por WhatsApp</a>
