@@ -198,7 +198,7 @@ footer b{color:var(--sand)}
     </div>
     <div class="hero-rating" data-reveal>
       <span class="stars">★★★★★</span>
-      <span><b><span class="count-up" data-count="5" data-decimal="1">5.0</span></b> · más de <span class="count-up" data-count="196">196</span> reseñas en Google</span>
+      <span><b><span class="count-up" data-count="5.0" data-decimal="1">5.0</span></b> · más de <span class="count-up" data-count="196">196</span> reseñas en Google</span>
     </div>
   </div>
 </header>
@@ -334,7 +334,7 @@ footer b{color:var(--sand)}
   if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('is-scrolled', window.scrollY>30); }, {passive:true}); }
 
   document.querySelectorAll('.count-up').forEach(function(el){
-    var target = parseInt(el.getAttribute('data-count'),10);
+    var target = parseFloat(el.getAttribute('data-count'));
     var done=false;
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){

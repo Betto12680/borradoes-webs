@@ -168,7 +168,7 @@ footer b{color:#fff}
         <a class="btn btn-wa" href="https://wa.me/573045669298?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Activ%20Fisioterapia" target="_blank">💬 Agenda por WhatsApp</a>
         <a class="btn btn-line" href="#servicios">Ver servicios</a>
       </div>
-      <div class="rating"><span class="stars">★★★★★</span><span><b><span class="count-up" data-count="5" data-decimal="1">5.0</span></b> · <span class="count-up" data-count="52">52</span> reseñas en Google</span></div>
+      <div class="rating"><span class="stars">★★★★★</span><span><b><span class="count-up" data-count="5.0" data-decimal="1">5.0</span></b> · <span class="count-up" data-count="52">52</span> reseñas en Google</span></div>
     </div>
     <div class="hero-img" data-reveal>
       <div class="zoom-wrap"><img class="kenburns" src="img/hero.jpg" alt="Equipo de Activ Fisioterapia en su gimnasio de rehabilitación"></div>
@@ -223,8 +223,21 @@ footer b{color:#fff}
 <section class="quote">
   <div class="wrap" data-reveal>
     <span class="stars">★★★★★</span>
-    <blockquote>"Nuestros pacientes nos califican con 5.0 estrellas en Google. Tu recuperación merece ese mismo nivel de cuidado."</blockquote>
-    <cite>Activ Fisioterapia · El Poblado, Medellín</cite>
+    <blockquote>"Después de mi lesión de rodilla, el plan me devolvió al entrenamiento en tiempo récord. Súper recomendados."</blockquote>
+    <cite>Carlos M. · corredor amateur de Activ Fisioterapia</cite>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker" data-reveal>Horarios</span>
+    <h2 data-reveal>Estamos cuando nos necesitas</h2>
+    <div class="cards" data-reveal-stagger style="margin-top:30px">
+      <div class="card"><div class="ico">🕐</div><h3>Lunes a viernes</h3><p>7:00 a.m. – 7:00 p.m.</p></div>
+      <div class="card"><div class="ico">🕐</div><h3>Sábados</h3><p>8:00 a.m. – 1:00 p.m.</p></div>
+      <div class="card"><div class="ico">📅</div><h3>Agendamiento</h3><p>Solo con cita previa. Escríbenos por WhatsApp para confirmar disponibilidad.</p></div>
+      <div class="card"><div class="ico">📍</div><h3>Ubicación</h3><p>Cra. 43A #8 Sur-15, Piso 5 · El Poblado</p></div>
+    </div>
   </div>
 </section>
 
@@ -295,7 +308,7 @@ footer b{color:#fff}
   var nav = document.querySelector('nav');
   if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('is-scrolled', window.scrollY>30); }, {passive:true}); }
   document.querySelectorAll('.count-up').forEach(function(el){
-    var target = parseInt(el.getAttribute('data-count'),10);
+    var target = parseFloat(el.getAttribute('data-count'));
     var done=false;
     var obs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){

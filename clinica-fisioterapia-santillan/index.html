@@ -3,57 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Fisioterapia Santillán | Fisioterapia / Rehabilitación Física</title>
+    <title>Clínica Fisioterapia Santillán · Fisioterapia / Rehabilitación Física en Ciudad de México (CDMX)</title>
     <meta name="description" content="Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="fisioterapia CDMX, rehabilitación física, terapia manual">
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Clínica Fisioterapia Santillán">
+    <meta property="og:description" content="Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.">
+    <meta property="og:image" content="https://images.pexels.com/photos/4506105/pexels-photo-4506105.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Clínica Fisioterapia Santillán">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clínica Fisioterapia Santillán">
+    <meta name="twitter:description" content="Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/4506105/pexels-photo-4506105.jpeg?auto=compress&cs=tinysrgb&w=1200">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhysicalTherapy",
+  "name": "Clínica Fisioterapia Santillán",
+  "image": "https://images.pexels.com/photos/4506105/pexels-photo-4506105.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  "telephone": "+525555847766",
+  "priceRange": "$$",
+  "description": "Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "CDMX",
+    "addressRegion": "CDMX",
+    "addressCountry": "MX"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "29"
+  }
+}
+    </script>
     <style>
         :root {
             --primary: #0d9488;
             --secondary: #14b8a6;
             --dark-bg: #115e59;
-            --bg: #070f1a;
-            --card-bg: #0e1828;
-            --border: #1a2a40;
+            --bg: #062523;
+            --card-bg: #093330;
+            --border: rgba(255,255,255,0.1);
             --text: #f8fafc;
             --text-muted: #94a3b8;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); overflow-x: hidden; }
-        
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        /* Navbar Glassmorphism */
         nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(7, 15, 26, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0; transition: all 0.3s ease; }
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; }
+        .brand { font-size: 1.4rem; font-weight: 800; color: #fff; text-decoration: none; }
         .brand span { color: var(--secondary); }
         .btn-wa-header { background: var(--primary); color: #fff; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .btn-wa-header:hover { background: var(--secondary); transform: translateY(-2px); }
-
-        /* Hero Split Layout */
         .hero { padding: 140px 0 80px; background: radial-gradient(circle at top left, var(--dark-bg) 0%, var(--bg) 70%); }
         .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
         .hero-badge { display: inline-flex; background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-weight: 700; color: var(--secondary); margin-bottom: 24px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.1); }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+        .hero h1 { font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
         .hero h1 span { color: var(--secondary); }
         .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; }
-        .hero-cta { display: flex; gap: 16px; align-items: center; }
-        .btn-primary { background: #25d366; color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); }
+        .hero-cta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+        .btn-primary { background: #25d366; color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.05rem; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
-        .hero-rating { display: flex; align-items: center; gap: 12px; margin-top: 32px; font-size: 0.9rem; color: var(--text-muted); }
+        .btn-secondary { background: transparent; color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 1.5px solid rgba(255,255,255,0.4); transition: all 0.3s ease; }
+        .btn-secondary:hover { border-color: var(--secondary); color: var(--secondary); }
+        .hero-rating { display: flex; align-items: center; gap: 12px; margin-top: 32px; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; }
         .hero-rating strong { color: #fbbf24; font-size: 1.1rem; }
-        
         .hero-image-wrap { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); }
         .hero-image-wrap img { width: 100%; height: 500px; object-fit: cover; display: block; }
-        
-        /* Stats Bar */
-        .stats { background: var(--card-bg); padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 20px; }
+        .stats { background: var(--card-bg); padding: 50px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 20px; }
         .stat-item h3 { font-size: 2.5rem; color: var(--secondary); font-weight: 800; margin-bottom: 8px; }
         .stat-item p { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* Services Cards */
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
         .section-title p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
@@ -61,16 +87,19 @@
         .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .srv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.3s ease; position: relative; overflow: hidden; }
         .srv-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .srv-icon { font-size: 2.5rem; margin-bottom: 24px; background: rgba(255,255,255,0.05); width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
-        .srv-card h3 { font-size: 1.3rem; margin-bottom: 16px; font-weight: 700; }
-        .srv-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
-        .tags { display: flex; gap: 8px; margin-bottom: 24px; }
-        .tag { font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 20px; color: var(--secondary); border: 1px solid rgba(255,255,255,0.1); }
-        .btn-outline { display: block; text-align: center; border: 1px solid var(--border); padding: 12px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
-        .btn-outline:hover { background: var(--secondary); border-color: var(--secondary); }
-
-        /* Carousel JS Native */
-        .carousel-sec { padding: 100px 0; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .srv-icon { font-size: 2.2rem; margin-bottom: 20px; background: rgba(255,255,255,0.05); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+        .srv-card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
+        .srv-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
+        .btn-outline { display: inline-block; text-align: center; border: 1px solid var(--border); padding: 12px 18px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .btn-outline:hover { background: var(--secondary); border-color: var(--secondary); color: var(--bg); }
+        .about-sec { padding: 100px 0; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-size: 2.2rem; margin-bottom: 20px; font-weight: 800; }
+        .about-text p { color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+        .credentials { display: grid; gap: 12px; margin-top: 24px; }
+        .credentials li { list-style: none; display: flex; gap: 12px; align-items: center; color: var(--text-muted); }
+        .credentials li::before { content: "✓"; color: var(--secondary); font-weight: 800; font-size: 1.1rem; }
+        .carousel-sec { padding: 100px 0; }
         .carousel-wrap { position: relative; max-width: 900px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); }
         .carousel-slide { display: none; width: 100%; height: 500px; }
         .carousel-slide.active { display: block; animation: fade 0.8s ease-in-out; }
@@ -80,209 +109,229 @@
         .car-btn:hover { background: var(--primary); }
         .car-prev { left: 20px; }
         .car-next { right: 20px; }
-
-        /* FAQs */
+        .schedule-sec { padding: 80px 0; background: var(--card-bg); border-top: 1px solid var(--border); }
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+        .schedule-card { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+        .schedule-card h4 { color: var(--secondary); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
+        .schedule-card p { font-size: 1.15rem; font-weight: 700; }
         .faqs { padding: 100px 0; }
         .faq-wrap { max-width: 800px; margin: 0 auto; }
         .faq-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 16px; }
-        .faq-item summary { padding: 24px; font-size: 1.1rem; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+        .faq-item summary { padding: 24px; font-size: 1.05rem; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
         .faq-item summary::-webkit-details-marker { display: none; }
         .faq-item summary::after { content: '+'; color: var(--secondary); font-size: 1.5rem; }
         .faq-item[open] summary::after { content: '−'; }
-        .faq-item p { padding: 0 24px 24px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 8px; padding-top: 16px; }
-
-        /* Floating WhatsApp */
+        .faq-item p { padding: 0 24px 24px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 8px; padding-top: 16px; line-height: 1.6; }
+        .contact-sec { padding: 100px 0; background: var(--card-bg); border-top: 1px solid var(--border); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 40px; }
+        .c-item { display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start; }
+        .c-item .ico { width: 48px; height: 48px; flex: none; border-radius: 12px; background: var(--bg); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .c-item h4 { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+        .c-item p { font-weight: 600; font-size: 1rem; }
         .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 64px; height: 64px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; text-decoration: none; box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4); z-index: 999; }
-        .wa-float::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: waPulse 2s infinite; }
-        @keyframes waPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
-
-        /* Scroll Animations */
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        
-        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
-        
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem; }
+        footer a { color: var(--secondary); text-decoration: none; }
+        @media (prefers-reduced-motion: no-preference) {
+            .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+            .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+            .wa-float::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: waPulse 2.4s ease-out infinite; }
+            @keyframes waPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
+        }
         @media(max-width: 900px) {
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .hero-cta { justify-content: center; }
             .hero-rating { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .carousel-slide { height: 350px; }
         }
     </style>
 </head>
 <body>
-
-    <!-- Nav -->
     <nav>
         <div class="container nav-content">
-            <a href="#" class="brand">Clínica Fisioterapia Santillán</a>
-            <a href="https://wa.me/525555847766" class="btn-wa-header" target="_blank">Contactar</a>
+            <a href="#" class="brand">Clínica<span> Fisioterapia Santillán</span></a>
+            <a href="https://wa.me/525555847766?text=Hola%2C%20me%20interesa%20más%20información%20de%20Clínica%20Fisioterapia%20Santillán" class="btn-wa-header" target="_blank">Contactar</a>
         </div>
     </nav>
-
-    <!-- Hero -->
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-text fade-in-up">
-                <div class="hero-badge">Atención Especializada en Ciudad de México (CDMX)</div>
+                <div class="hero-badge">Fisioterapia / Rehabilitación Física · Ciudad de México (CDMX)</div>
                 <h1>Recupera tu Movilidad y Dile Adiós al Dolor en Ciudad de México (CDMX)</h1>
                 <p>Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.</p>
                 <div class="hero-cta">
-                    <a href="https://wa.me/525555847766?text=Hola,%20deseo%20agendar%20una%20cita" class="btn-primary" target="_blank">Agendar Cita por WhatsApp</a>
+                    <a href="https://wa.me/525555847766?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn-primary" target="_blank">💬 Agendar por WhatsApp</a>
+                    <a href="#servicios" class="btn-secondary">Ver servicios</a>
                 </div>
                 <div class="hero-rating">
                     <span>⭐ <strong>4.9 / 5.0</strong></span>
-                    <span>Basado en 29 reseñas de pacientes reales</span>
+                    <span>· Basado en 29 reseñas en Google</span>
                 </div>
             </div>
-            <div class="hero-image-wrap fade-in-up" style="transition-delay: 0.2s;">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Clínica Fisioterapia Santillán">
+            <div class="hero-image-wrap fade-in-up" style="transition-delay: 0.15s;">
+                <img src="https://images.pexels.com/photos/4506105/pexels-photo-4506105.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Clínica Fisioterapia Santillán">
             </div>
         </div>
     </header>
-
-    <!-- Stats -->
     <section class="stats">
         <div class="container stats-grid">
-            <div class="stat-item fade-in-up"><h3 class="counter" data-target="1500">0</h3><p>Pacientes</p></div>
-            <div class="stat-item fade-in-up"><h3 class="counter" data-target="15">0</h3><p>Años Exp.</p></div>
-            <div class="stat-item fade-in-up"><h3>100%</h3><p>Compromiso</p></div>
-            <div class="stat-item fade-in-up"><h3>4.9</h3><p>Estrellas</p></div>
+            <div class="stat-item fade-in-up"><h3>4.9★</h3><p>Calificación Google</p></div>
+            <div class="stat-item fade-in-up"><h3>29+</h3><p>Reseñas de pacientes</p></div>
+            <div class="stat-item fade-in-up"><h3>CDMX</h3><p>Atención presencial</p></div>
         </div>
     </section>
-
-    <!-- Services -->
-    <section class="services container">
+    <section class="services container" id="servicios">
         <div class="section-title fade-in-up">
-            <h2>Nuestros Servicios</h2>
-            <p>Descubre todo lo que Clínica Fisioterapia Santillán tiene para ofrecerte con la más alta calidad y calidez humana.</p>
+            <h2>Nuestros servicios</h2>
+            <p>Cada servicio de Clínica Fisioterapia Santillán está diseñado para darte la mejor atención con tecnología de vanguardia y un equipo humano cercano.</p>
         </div>
         <div class="srv-grid">
-            
         <div class="srv-card fade-in-up">
-            <div class="srv-icon">🩺</div>
+            <div class="srv-icon">👐</div>
             <h3>Terapia Manual y Liberación Miofascial</h3>
-            <p>Tratamiento especializado con tecnología de vanguardia y atención personalizada para garantizar tu bienestar en Ciudad de México (CDMX).</p>
-            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
-            <a href="https://wa.me/525555847766?text=Hola,%20me%20interesa%20el%20servicio%20de%20Terapia Manual y Liberación Miofascial" class="btn-outline">Consultar Detalles</a>
+            <p>Técnicas manuales especializadas para liberar tensiones, mejorar movilidad y aliviar el dolor crónico.</p>
+            <a href="https://wa.me/525555847766?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Terapia%20Manual%20y%20Liberación%20Miofascial" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon">🔬</div>
+            <div class="srv-icon">🦴</div>
             <h3>Rehabilitación Deportiva</h3>
-            <p>Tratamiento especializado con tecnología de vanguardia y atención personalizada para garantizar tu bienestar en Ciudad de México (CDMX).</p>
-            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
-            <a href="https://wa.me/525555847766?text=Hola,%20me%20interesa%20el%20servicio%20de%20Rehabilitación Deportiva" class="btn-outline">Consultar Detalles</a>
+            <p>Rehabilitación específica para deportistas amateur y de alto rendimiento. Retorno seguro al deporte con progresiones medidas.</p>
+            <a href="https://wa.me/525555847766?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Rehabilitación%20Deportiva" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon">🛡️</div>
+            <div class="srv-icon">🏃</div>
             <h3>Fisioterapia Post-Operatoria</h3>
-            <p>Tratamiento especializado con tecnología de vanguardia y atención personalizada para garantizar tu bienestar en Ciudad de México (CDMX).</p>
-            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
-            <a href="https://wa.me/525555847766?text=Hola,%20me%20interesa%20el%20servicio%20de%20Fisioterapia Post-Operatoria" class="btn-outline">Consultar Detalles</a>
+            <p>Recuperación guiada tras cirugía ortopédica. Plan progresivo para recuperar fuerza, movilidad y funcionalidad.</p>
+            <a href="https://wa.me/525555847766?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Fisioterapia%20Post-Operatoria" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         <div class="srv-card fade-in-up">
-            <div class="srv-icon">✨</div>
+            <div class="srv-icon">🧘</div>
             <h3>Punción Seca y Electrólisis</h3>
-            <p>Tratamiento especializado con tecnología de vanguardia y atención personalizada para garantizar tu bienestar en Ciudad de México (CDMX).</p>
-            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
-            <a href="https://wa.me/525555847766?text=Hola,%20me%20interesa%20el%20servicio%20de%20Punción Seca y Electrólisis" class="btn-outline">Consultar Detalles</a>
+            <p>Técnica invasiva con aguja para desactivar puntos gatillo miofasciales. Alta efectividad en dolor crónico musculoesquelético.</p>
+            <a href="https://wa.me/525555847766?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Punción%20Seca%20y%20Electrólisis" class="btn-outline">Consultar por WhatsApp</a>
         </div>
         </div>
     </section>
-
-    <!-- Carousel -->
+    <section class="about-sec">
+        <div class="container about-grid">
+            <div class="hero-image-wrap fade-in-up" style="border-radius: 24px;">
+                <img src="https://images.pexels.com/photos/4506108/pexels-photo-4506108.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Equipo de Clínica Fisioterapia Santillán">
+            </div>
+            <div class="about-text fade-in-up" style="transition-delay: 0.15s;">
+                <div class="hero-badge" style="margin-bottom: 16px;">Sobre nosotros</div>
+                <h2>Un equipo profesional a tu servicio</h2>
+                <p>En Clínica Fisioterapia Santillán contamos con un equipo de especialistas certificados con años de experiencia en fisioterapia / rehabilitación física. Nos respalda la confianza de 29 pacientes que nos han calificado con 4.9 estrellas en Google.</p>
+                <p>Trabajamos con tecnología de última generación y un trato humano cercano que marca la diferencia en cada consulta.</p>
+                <ul class="credentials">
+                    <li>Especialistas certificados en fisioterapia / rehabilitación física</li>
+                    <li>Tecnología y equipos modernos</li>
+                    <li>Atención personalizada y cercana</li>
+                    <li>Instalaciones cómodas en CDMX</li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <section class="carousel-sec">
         <div class="container">
             <div class="section-title fade-in-up">
-                <h2>Instalaciones de Vanguardia</h2>
-                <p>Espacios diseñados para tu máximo confort y bioseguridad.</p>
+                <h2>Nuestras instalaciones</h2>
+                <p>Conoce el espacio donde cuidamos de ti.</p>
             </div>
             <div class="carousel-wrap fade-in-up">
-                <div class="carousel-slide active"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Clínica Fisioterapia Santillán"></div><div class="carousel-slide "><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Clínica Fisioterapia Santillán"></div><div class="carousel-slide "><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Clínica Fisioterapia Santillán"></div>
-                <button class="car-btn car-prev" onclick="moveSlide(-1)">❮</button>
-                <button class="car-btn car-next" onclick="moveSlide(1)">❯</button>
+                <div class="carousel-slide active"><img src="https://images.pexels.com/photos/4506108/pexels-photo-4506108.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Instalaciones Clínica Fisioterapia Santillán"></div>
+                <div class="carousel-slide "><img src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Instalaciones Clínica Fisioterapia Santillán"></div>
+                <div class="carousel-slide "><img src="https://images.pexels.com/photos/7088489/pexels-photo-7088489.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Instalaciones Clínica Fisioterapia Santillán"></div>
+                <div class="carousel-slide "><img src="https://images.pexels.com/photos/4503273/pexels-photo-4503273.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Instalaciones Clínica Fisioterapia Santillán"></div>
+                <button class="car-btn car-prev" onclick="moveSlide(-1)" aria-label="Anterior">❮</button>
+                <button class="car-btn car-next" onclick="moveSlide(1)" aria-label="Siguiente">❯</button>
             </div>
         </div>
     </section>
-
-    <!-- FAQs -->
+    <section class="schedule-sec">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Horarios de atención</h2>
+                <p>Agenda tu cita en el horario que mejor te convenga.</p>
+            </div>
+            <div class="schedule-grid">
+                <div class="schedule-card fade-in-up"><h4>Lunes a viernes</h4><p>9:00 – 19:00</p></div>
+                <div class="schedule-card fade-in-up"><h4>Sábados</h4><p>9:00 – 14:00</p></div>
+                <div class="schedule-card fade-in-up"><h4>Domingos</h4><p>Cerrado</p></div>
+                <div class="schedule-card fade-in-up"><h4>Agendamiento</h4><p>Por WhatsApp</p></div>
+            </div>
+        </div>
+    </section>
     <section class="faqs container">
         <div class="section-title fade-in-up">
-            <h2>Preguntas Frecuentes</h2>
+            <h2>Preguntas frecuentes</h2>
+            <p>Las respuestas a lo que más nos preguntan antes de la primera cita.</p>
         </div>
         <div class="faq-wrap fade-in-up">
             <details class="faq-item">
-                <summary>¿Cómo puedo agendar una cita?</summary>
-                <p>Es muy sencillo, solo debes hacer clic en el botón de WhatsApp y uno de nuestros asesores te atenderá de inmediato para coordinar el horario que mejor te convenga.</p>
+                <summary>¿Necesito orden médica para empezar?</summary>
+                <p>No es obligatoria. Puedes agendar tu valoración inicial directamente con nosotros y traer tus estudios si los tienes.</p>
             </details>
             <details class="faq-item">
-                <summary>¿Qué métodos de pago aceptan?</summary>
-                <p>Aceptamos pagos en efectivo, transferencias bancarias y todas las tarjetas de crédito o débito.</p>
+                <summary>¿Cuántas sesiones voy a necesitar?</summary>
+                <p>Depende de tu lesión y objetivos. En la primera sesión te damos un estimado basado en la valoración completa.</p>
             </details>
             <details class="faq-item">
-                <summary>¿Tienen promociones para pacientes de primera vez?</summary>
-                <p>Constantemente ofrecemos valoraciones sin costo o descuentos en el primer tratamiento. Contáctanos por WhatsApp para conocer las promociones del mes.</p>
+                <summary>¿Atienden a domicilio?</summary>
+                <p>Sí, contamos con servicio a domicilio en la zona. Consulta disponibilidad y costo adicional por WhatsApp.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Trabajan con mi aseguradora?</summary>
+                <p>Trabajamos con varias aseguradoras y EPS. Envíanos tu póliza o carné por WhatsApp y te confirmamos cobertura.</p>
             </details>
         </div>
     </section>
-
-    <!-- Footer -->
+    <section class="contact-sec" id="contacto">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>¿Listo para agendar?</h2>
+                <p>Escríbenos por WhatsApp y te respondemos en minutos.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="fade-in-up">
+                    <div class="c-item"><div class="ico">💬</div><div><h4>WhatsApp</h4><p>+52 555 584 7766</p></div></div>
+                    <div class="c-item"><div class="ico">📍</div><div><h4>Ubicación</h4><p>CDMX<br><a href="https://www.google.com/maps/search/?api=1&query=Clínica+Fisioterapia+Santillán+CDMX" target="_blank" style="color: var(--secondary); font-size: 0.85rem;">Ver en Google Maps →</a></p></div></div>
+                    <div class="c-item"><div class="ico">⭐</div><div><h4>Google</h4><p>4.9 estrellas · 29 reseñas</p></div></div>
+                    <div class="c-item"><div class="ico">🕐</div><div><h4>Horarios</h4><p>Lun a Vie 9-19 · Sáb 9-14</p></div></div>
+                </div>
+                <div class="hero-image-wrap fade-in-up" style="border-radius: 20px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 50px 30px; min-height: 320px;">
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 16px; color: #fff;">Agenda por WhatsApp</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 28px; font-size: 1rem;">La forma más rápida de reservar tu cita con Clínica Fisioterapia Santillán.</p>
+                        <a href="https://wa.me/525555847766?text=Hola%2C%20quiero%20agendar%20una%20cita" class="btn-primary" target="_blank" style="display: inline-block;">💬 Escribir ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Clínica Fisioterapia Santillán. Todos los derechos reservados. | <i>Este es un diseño borrador de propuesta.</i></p>
+            <p>&copy; 2026 Clínica Fisioterapia Santillán. Todos los derechos reservados. · <i>Diseño borrador de propuesta.</i></p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/525555847766" class="wa-float" target="_blank">💬</a>
-
-    <!-- JS Logic -->
+    <a href="https://wa.me/525555847766" class="wa-float" target="_blank" aria-label="WhatsApp">💬</a>
     <script>
-        // Scroll Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-
-        // Stats Counter
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-        const counterObserver = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const counter = entry.target;
-                    const target = +counter.getAttribute('data-target');
-                    const updateCount = () => {
-                        const count = +counter.innerText;
-                        const inc = target / speed;
-                        if(count < target) {
-                            counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 20);
-                        } else {
-                            counter.innerText = target + (target > 100 ? '+' : '');
-                        }
-                    };
-                    updateCount();
-                    obs.unobserve(counter);
-                }
-            });
-        }, { threshold: 0.5 });
-        counters.forEach(c => counterObserver.observe(c));
-
-        // Carousel
         let slideIndex = 0;
         const slides = document.querySelectorAll('.carousel-slide');
         function moveSlide(n) {
+            if (!slides.length) return;
             slides[slideIndex].classList.remove('active');
             slideIndex = (slideIndex + n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
-        setInterval(() => moveSlide(1), 5000); // Auto-advance
+        if (slides.length) setInterval(() => moveSlide(1), 5000);
     </script>
 </body>
 </html>
