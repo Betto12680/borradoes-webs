@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental Proboca — Tu Salud Bucal en Buenas Manos — Av. Zaragoza, CDMX</title>
+  <meta name="description" content="Atención odontológica accesible, profesional y honesta para toda la familia con los más altos estándares de higiene.">
+  <meta name="keywords" content="clinica dental proboca, dentista zaragoza cdmx, consulta dental accesible cdmx, obturaciones resina">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://betto12680.github.io/borradoes-webs/clinica-dental-proboca/">
+  <meta property="og:title" content="Clínica Dental Proboca — Tu Salud Bucal en Buenas Manos — Av. Zaragoza, CDMX">
+  <meta property="og:description" content="Atención odontológica accesible, profesional y honesta para toda la familia con los más altos estándares de higiene.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clínica Dental Proboca">
+  <meta name="twitter:description" content="Atención odontológica accesible, profesional y honesta para toda la familia con los más altos estándares de higiene.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clínica Dental Proboca",
+  "url": "https://betto12680.github.io/borradoes-webs/clinica-dental-proboca/",
+  "telephone": "+525557638899",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de México (CDMX)",
+    "addressCountry": "MX"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "19"
+  },
+  "priceRange": "$$"
+}
+  </script>
+
+  <style>
+    :root {
+      --primary: #0d9488;
+      --accent: #2dd4bf;
+      --bg: #0b0f19;
+      --card-bg: #151c2c;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #232d42;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    /* Navigation Header */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      transition: all 0.3s ease;
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo {
+      font-size: 1.35rem; font-weight: 800; color: #fff;
+      text-decoration: none; display: flex; align-items: center; gap: 10px;
+    }
+    .brand-logo span { color: var(--accent); }
+
+    .btn-header-wa {
+      background: #25d366; color: #fff; text-decoration: none;
+      padding: 10px 20px; border-radius: 50px; font-weight: 700;
+      font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn-header-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
+    /* Floating WhatsApp Button */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 999;
+      background: #25d366; color: #fff; width: 62px; height: 62px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      text-decoration: none; font-size: 1.8rem;
+      transition: transform 0.3s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-float .pulse {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: #25d366; animation: wapulse 2.2s ease-out infinite; z-index: -1;
+    }
+    @keyframes wapulse { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2); opacity: 0; } }
+
+    /* Hero Section */
+    .hero {
+      padding: 170px 0 100px;
+      background: linear-gradient(135deg, #115e59 0%, #0d9488 100%);
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 20px; border-radius: 30px; font-weight: 600;
+      font-size: 0.95rem; color: #fbbf24; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3.1rem; font-weight: 800; max-width: 900px;
+      margin: 0 auto 24px; line-height: 1.18; letter-spacing: -0.02em;
+    }
+    .hero p.lead {
+      font-size: 1.2rem; color: rgba(255,255,255,0.85);
+      max-width: 720px; margin: 0 auto 40px; font-weight: 400;
+    }
+    .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    .btn-hero-primary {
+      background: #25d366; color: #fff; text-decoration: none;
+      padding: 16px 36px; border-radius: 50px; font-weight: 800;
+      font-size: 1.1rem; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn-hero-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55); }
+
+    /* Image Banner Showcase */
+    .hero-img-wrap {
+      margin-top: 60px; border-radius: 24px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6);
+      max-height: 480px;
+    }
+    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Services Grid */
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 12px; }
+    .section-title p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px; margin-bottom: 90px;
+    }
+    .service-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px; transition: all 0.3s ease;
+      position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px); border-color: var(--accent);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 52px; height: 52px; background: rgba(59, 130, 246, 0.1);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 20px; color: var(--accent);
+    }
+    .service-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
+    .service-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+
+    /* Trust / Testimonials Banner */
+    .trust-banner {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 24px; padding: 48px; margin-bottom: 90px; text-align: center;
+    }
+    .trust-rating-score { font-size: 3.5rem; font-weight: 800; color: #fbbf24; line-height: 1; margin-bottom: 8px; }
+    .trust-stars { color: #fbbf24; font-size: 1.5rem; margin-bottom: 12px; }
+    .trust-reviews-count { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 28px; }
+
+    /* FAQs Section */
+    .faqs-wrap { max-width: 800px; margin: 0 auto 90px; }
+    .faq-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 14px; margin-bottom: 16px; overflow: hidden;
+    }
+    .faq-card summary {
+      padding: 22px 28px; font-weight: 700; font-size: 1.08rem;
+      cursor: pointer; list-style: none; display: flex;
+      justify-content: space-between; align-items: center; color: #fff;
+    }
+    .faq-card summary::-webkit-details-marker { display: none; }
+    .faq-card summary::after {
+      content: '+'; font-size: 1.5rem; color: var(--accent); transition: transform 0.25s ease;
+    }
+    .faq-card[open] summary::after { transform: rotate(45deg); }
+    .faq-card p { padding: 0 28px 22px; color: var(--text-muted); font-size: 1rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 8px; padding-top: 16px; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border); padding: 50px 0;
+      text-align: center; color: var(--text-muted); font-size: 0.95rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p.lead { font-size: 1.05rem; }
+      .btn-hero-primary { padding: 14px 28px; font-size: 1rem; width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/525557638899?text=Hola%20equipo%20de%20Clínica Dental Proboca,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." class="wa-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <div class="pulse"></div>
+    💬
+  </a>
+
+  <!-- Header Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        Clínica Dental Proboca
+      </a>
+      <a href="https://wa.me/525557638899?text=Hola%20Clínica Dental Proboca,%20deseo%20agendar%20cita." class="btn-header-wa" target="_blank">
+        💬 Agendar por WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Showcase Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        ⭐ 4.7 Calificación en Google Maps (19 opiniones reales)
+      </div>
+      <h1>Tu Salud Bucal en Buenas Manos — Av. Zaragoza, CDMX</h1>
+      <p class="lead">Atención odontológica accesible, profesional y honesta para toda la familia con los más altos estándares de higiene.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/525557638899?text=Hola%20Clínica Dental Proboca,%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="btn-hero-primary" target="_blank">
+          👉 Agendar Mi Cita Directa por WhatsApp
+        </a>
+      </div>
+      
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" alt="Clínica Dental Proboca - Tu Salud Bucal en Buenas Manos — Av. Zaragoza, CDMX" loading="lazy" width="1200" height="480">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Services Section -->
+  <section class="container" style="padding-top: 90px;">
+    <div class="section-title">
+      <h2>Nuestros Servicios Especializados</h2>
+      <p>Brindamos atención personalizada con los más altos estándares de calidad en Ciudad de México (CDMX).</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Consultas y Diagnóstico con Cámara</h3>
+        <p>Evaluación completa de tu boca con imágenes ampliadas en monitor.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Resinas Estéticas del Color Dental</h3>
+        <p>Eliminación de caries y restauración con empastes invisibles del mismo tono de tu diente.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Extracciones y Alivio del Dolor</h3>
+        <p>Atención oportuna de molestias e infecciones bucales.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Limpiezas Dentales Preventivas</h3>
+        <p>Remoción de sarro acumulado para prevenir la inflamación de encías (gingivitis).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Google Rating Showcase Banner -->
+  <section class="container">
+    <div class="trust-banner">
+      <div class="trust-rating-score">4.7</div>
+      <div class="trust-stars">★★★★★</div>
+      <div class="trust-reviews-count">Reseñas de pacientes y clientes verificados en Google Maps (19 opiniones)</div>
+      <a href="https://wa.me/525557638899?text=Hola%20Clínica Dental Proboca,%20me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n" class="btn-header-wa" style="padding: 12px 30px; font-size: 1.05rem;" target="_blank">
+        💬 Contactar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="container">
+    <div class="section-title">
+      <h2>Preguntas Frecuentes</h2>
+      <p>Resolvemos tus dudas principales para que inicies tu tratamiento con total tranquilidad.</p>
+    </div>
+
+    <div class="faqs-wrap">
+
+      <details class="faq-card">
+        <summary>¿Cómo puedo agendar mi primera cita de valoración?</summary>
+        <p>Puedes tocar el botón directo de WhatsApp para agendar tu fecha y hora disponible en menos de 2 minutos.</p>
+      </details>
+      <details class="faq-card">
+        <summary>¿Aceptan urgencias u odontología el mismo día?</summary>
+        <p>Sí, atendemos emergencias por dolor agudo o fracturas dentales con prioridad según agenda.</p>
+      </details>
+      <details class="faq-card">
+        <summary>¿Qué formas de pago aceptan?</summary>
+        <p>Aceptamos pago en efectivo, transferencias bancarias (SPEI) y tarjetas de crédito o débito.</p>
+      </details>
+      <details class="faq-card">
+        <summary>¿Ofrecen facilidades de pago para tratamientos estéticos?</summary>
+        <p>Contamos con planes de financiamiento y facilidades en tratamientos de ortodoncia e implantes.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Clínica Dental Proboca — Ciudad de México (CDMX). Propuesta de diseño web por <a href="https://wa.me/573104816153" target="_blank">Edilberto Sarmiento</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
