@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actif Fisioterapia | Fisioterapia & Terapia Manual</title>
+    <meta name="description" content="Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d9488;
+            --secondary: #14b8a6;
+            --dark-bg: #115e59;
+            --bg: #070f1a;
+            --card-bg: #0e1828;
+            --border: #1a2a40;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Navbar Glassmorphism */
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(7, 15, 26, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 0; transition: all 0.3s ease; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.4rem; font-weight: 800; color: #fff; text-decoration: none; }
+        .brand span { color: var(--secondary); }
+        .btn-wa-header { background: var(--primary); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .btn-wa-header:hover { background: var(--secondary); transform: translateY(-2px); }
+
+        /* Hero Split Layout */
+        .hero { padding: 140px 0 80px; background: radial-gradient(circle at top left, var(--dark-bg) 0%, var(--bg) 70%); }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+        .hero-badge { display: inline-flex; background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 20px; font-weight: 700; color: var(--secondary); margin-bottom: 24px; font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.1); text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 24px; }
+        .hero h1 span { color: var(--secondary); }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.65; }
+        .hero-cta { display: flex; gap: 16px; align-items: center; }
+        .btn-primary { background: #25d366; color: #fff; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.05rem; display: inline-flex; align-items: center; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5); }
+        .hero-rating { display: flex; align-items: center; gap: 12px; margin-top: 32px; font-size: 0.9rem; color: var(--text-muted); }
+        .hero-rating strong { color: #fbbf24; font-size: 1.1rem; }
+        
+        .hero-image-wrap { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1); }
+        .hero-image-wrap img { width: 100%; height: 480px; object-fit: cover; display: block; }
+        
+        /* Stats Bar */
+        .stats { background: var(--card-bg); padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 20px; }
+        .stat-item h3 { font-size: 2.5rem; color: var(--secondary); font-weight: 800; margin-bottom: 8px; }
+        .stat-item p { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Viñetas Animadas (Punticos con Pulso) */
+        .pulse-bullet-dot { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-bottom: 16px; }
+        .pulse-bullet-dot .dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--secondary); position: relative; box-shadow: 0 0 10px var(--secondary); }
+        .pulse-bullet-dot .dot::after { content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px; border-radius: 50%; border: 2px solid var(--secondary); animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(1.8); opacity: 0; } }
+
+        /* Services Cards */
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; }
+        .section-title p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+        .services { padding: 100px 0; }
+        .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+        .srv-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .srv-card:hover { transform: translateY(-8px); border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .srv-card h3 { font-size: 1.25rem; margin-bottom: 14px; font-weight: 700; }
+        .srv-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
+        .tags { display: flex; gap: 8px; margin-bottom: 24px; }
+        .tag { font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 20px; color: var(--secondary); border: 1px solid rgba(255,255,255,0.1); }
+        .btn-outline { display: block; text-align: center; border: 1px solid var(--border); padding: 12px; border-radius: 12px; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .btn-outline:hover { background: var(--secondary); border-color: var(--secondary); color: #000; }
+
+        /* Carousel JS Native */
+        .carousel-sec { padding: 100px 0; background: var(--card-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .carousel-wrap { position: relative; max-width: 900px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); }
+        .carousel-slide { display: none; width: 100%; height: 480px; }
+        .carousel-slide.active { display: block; animation: fade 0.8s ease-in-out; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+        @keyframes fade { from {opacity: 0.4} to {opacity: 1} }
+        .car-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: 1px solid rgba(255,255,255,0.2); width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; backdrop-filter: blur(4px); transition: all 0.3s; }
+        .car-btn:hover { background: var(--primary); }
+        .car-prev { left: 20px; }
+        .car-next { right: 20px; }
+
+        /* FAQs */
+        .faqs { padding: 100px 0; }
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; margin-bottom: 16px; }
+        .faq-item summary { padding: 24px; font-size: 1.05rem; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; color: var(--secondary); font-size: 1.4rem; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding: 0 24px 24px; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 8px; padding-top: 16px; }
+
+        /* Floating WhatsApp */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; text-decoration: none; box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4); z-index: 999; transition: transform 0.3s ease; }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float::before { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: waPulse 2s infinite; }
+        @keyframes waPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
+
+        /* Scroll Animations */
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; }
+        
+        @media(max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-cta { justify-content: center; }
+            .hero-rating { justify-content: center; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .carousel-slide { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="brand">Actif Fisioterapia</a>
+            <a href="https://wa.me/523336150123" class="btn-wa-header" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Contactar</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text fade-in-up">
+                <div class="hero-badge">Atención Especializada en Guadalajara</div>
+                <h1>Recupera tu Movilidad y Dile Adiós al Dolor en Guadalajara</h1>
+                <p>Fisioterapia deportiva, neurológica y traumatológica guiada por especialistas. Recuperación acelerada con la mejor tecnología.</p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/523336150123?text=Hola,%20deseo%20agendar%20una%20cita" class="btn-primary" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Agendar Cita por WhatsApp</a>
+                </div>
+                <div class="hero-rating">
+                    <span><svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <strong>4.8 / 5.0</strong></span>
+                    <span>Basado en 44 reseñas verificadas</span>
+                </div>
+            </div>
+            <div class="hero-image-wrap fade-in-up" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80" alt="Actif Fisioterapia">
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item fade-in-up"><h3 class="counter" data-target="1200">0</h3><p>Pacientes Felices</p></div>
+            <div class="stat-item fade-in-up"><h3 class="counter" data-target="12">0</h3><p>Años Exp.</p></div>
+            <div class="stat-item fade-in-up"><h3>100%</h3><p>Garantía de Calidad</p></div>
+            <div class="stat-item fade-in-up"><h3>4.8</h3><p>Calificación Google</p></div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services container" id="servicios">
+        <div class="section-title fade-in-up">
+            <h2>Nuestros Servicios</h2>
+            <p>Descubre los tratamientos especializados que Actif Fisioterapia ofrece con la más alta calidad y atención humana.</p>
+        </div>
+        <div class="srv-grid">
+            
+        <div class="srv-card fade-in-up">
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
+            <h3>Terapia Manual y Liberación Miofascial</h3>
+            <p>Tratamiento enfocado en aliviar la tensión profunda en músculos y articulaciones acumulada por estrés o lesiones.</p>
+            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
+            <a href="https://wa.me/523336150123?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Terapia Manual y Liberación Miofascial" class="btn-outline">Consultar por WhatsApp</a>
+        </div>
+        <div class="srv-card fade-in-up">
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
+            <h3>Rehabilitación Deportiva</h3>
+            <p>Optimización muscular y protocolos personalizados para retornar a tus entrenamientos con total seguridad.</p>
+            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
+            <a href="https://wa.me/523336150123?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Rehabilitación Deportiva" class="btn-outline">Consultar por WhatsApp</a>
+        </div>
+        <div class="srv-card fade-in-up">
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
+            <h3>Fisioterapia Post-Operatoria</h3>
+            <p>Acompañamiento especializado para reacondicionar tejidos y acelerar la cicatrización tras intervenciones quirúrgicas.</p>
+            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
+            <a href="https://wa.me/523336150123?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Fisioterapia Post-Operatoria" class="btn-outline">Consultar por WhatsApp</a>
+        </div>
+        <div class="srv-card fade-in-up">
+            <div class="pulse-bullet-dot"><span class="dot"></span></div>
+            <h3>Punción Seca y Electrólisis</h3>
+            <p>Técnicas avanzadas para desactivar puntos gatillo musculares y reducir la inflamación de forma rápida.</p>
+            <div class="tags"><span class="tag">Especializado</span><span class="tag">Seguro</span></div>
+            <a href="https://wa.me/523336150123?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Punción Seca y Electrólisis" class="btn-outline">Consultar por WhatsApp</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <section class="carousel-sec">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <h2>Instalaciones de Vanguardia</h2>
+                <p>Espacios confortables e higienizados diseñados para tu absoluta bioseguridad.</p>
+            </div>
+            <div class="carousel-wrap fade-in-up">
+                <div class="carousel-slide active"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Actif Fisioterapia"></div><div class="carousel-slide "><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Actif Fisioterapia"></div><div class="carousel-slide "><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Actif Fisioterapia"></div>
+                <button class="car-btn car-prev" onclick="moveSlide(-1)" aria-label="Anterior">❮</button>
+                <button class="car-btn car-next" onclick="moveSlide(1)" aria-label="Siguiente">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faqs container">
+        <div class="section-title fade-in-up">
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resolvemos tus dudas para que inicies tu tratamiento con absoluta confianza.</p>
+        </div>
+        <div class="faq-wrap fade-in-up">
+            <details class="faq-item">
+                <summary>¿Cómo puedo agendar una consulta?</summary>
+                <p>Solo debes hacer clic en el botón de WhatsApp y nuestro equipo te asignará la fecha y hora disponible de inmediato.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué métodos de pago aceptan?</summary>
+                <p>Aceptamos efectivo, transferencias bancarias (SPEI) y tarjetas de crédito o débito.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Ofrecen garantía o valoración inicial?</summary>
+                <p>Todos nuestros procedimientos cuentan con garantía de calidad y seguimiento médico continuo.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Actif Fisioterapia — Guadalajara. Todos los derechos reservados. | <i>Este es un diseño borrador de propuesta.</i></p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/523336150123?text=Hola%20Actif Fisioterapia,%20quiero%20informaci%C3%B3n" class="wa-float" target="_blank" aria-label="WhatsApp Directo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    </a>
+
+    <!-- JS Logic -->
+    <script>
+        // Scroll Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Stats Counter
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+                        if(count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target + (target > 100 ? '+' : '');
+                        }
+                    };
+                    updateCount();
+                    obs.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // Carousel
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        function moveSlide(n) {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+        if (slides.length > 0) {
+            setInterval(() => moveSlide(1), 5000);
+        }
+    </script>
+</body>
+</html>
